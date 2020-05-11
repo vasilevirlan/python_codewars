@@ -1,2 +1,2 @@
 # python_codewars
-Exercese from codewars.com
+Exercese from codewars.com.
