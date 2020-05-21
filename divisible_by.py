@@ -5,5 +5,3 @@ def divisible_by(numbers, divisor):
         divisible_by([1, 2, 3, 4, 5, 6], 2) ==> [2, 4, 6]
     """
     return [x for x in numbers if x % divisor == 0]
-
-
