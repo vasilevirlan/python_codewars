@@ -1,44 +1,24 @@
 import unittest
-from find_vowels_index import vowels_index as vi
+from find_vowels import vowels_indices as vi
 
 
-class TestVowelsIndex(unittest.TestCase):
+class NameTestCases(unittest.TestCase):
 
-    def test_vi(self):
+    def test_one(self):
+        result = vi('Mmmm')
+        self.assertEqual(result, [])
 
-        argm = 'vasile'
-        outputs = vi(argm)
+    def test_two(self):
+        result = vi('Super')
+        self.assertEqual(result, [2, 4])
 
-        self.assertEqual(outputs, [2, 4, 6])
+    def test_three(self):
+        result = vi('Apple')
+        self.assertEqual(result, [1, 5])
 
-    def test_vi2(self):
-
-        argm = 'Python'
-        outputs = vi(argm)
-
-        self.assertEqual(outputs, [2, 5])
-
-    def test_vi3(self):
-
-        argm = 'software'
-        outputs = vi(argm)
-
-        self.assertEqual(outputs, [2, 6, 8])
-
-    def test_vi4(self):
-
-        argm = 'vvvvv'
-        outputs = vi(argm)
-
-        self.assertEqual(outputs, [])
-
-    def test_vi5(self):
-
-        argm = 'file'
-        outputs = vi(argm)
-
-        self.assertEqual(outputs, [2, 4])
+    def test_four(self):
+        result = vi('YoMama')
+        self.assertEqual(result, [1, 2, 4, 6])
 
 
-if __name__ == '__main__':
-    unittest.main()
+unittest.main()
