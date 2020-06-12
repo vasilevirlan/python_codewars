@@ -1,5 +1,5 @@
 def count_by(x, n):
-    '''Create a function with two arguments that will return an array of the 
+    '''Create a function with two arguments that will return an array of the
         first (n) multiply of (x)
         >>> count_by(1, 10)
         [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
