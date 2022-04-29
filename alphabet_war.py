@@ -16,14 +16,11 @@ def alphabet_war(fight: str) -> str:
     right_side = dict(zip(['m', 'q', 'd', 'z'], [4, 3, 2, 1]))
     remain_letters = ['a', 'c', 'e', 'f', 'g', 'h', 'i', 'l',
                       'n', 'o', 'r', 't', 'u', 'v', 'x', 'y']
-    lefsidescore = []
-    rightsidescore = []
 
-    for i in fight:
-        if i in left_side and i not in remain_letters:
-            lefsidescore.append(left_side[i])
-        elif i in right_side and i not in remain_letters:
-            rightsidescore.append(right_side[i])
+    lefsidescore = [left_side[i] for i in fight
+                    if i in left_side and i not in remain_letters]
+    rightsidescore = [right_side[i] for i in fight
+                      if i in right_side and i not in remain_letters]
 
     if sum(lefsidescore) > sum(rightsidescore):
         return 'Left side wins!'
